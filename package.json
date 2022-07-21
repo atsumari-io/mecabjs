@@ -1,22 +1,33 @@
 {
   "name": "mecab-async",
   "version": "0.1.2",
+  "description": "Asynchronous japanese morphological analyzer using MeCab.",
   "author": {
-    "name": "hecomi",
-    "email": "info@hecomi.com"
+    "name": "Nicholas Ramkissoon",
+    "email": "nicholas.ramkissoon01@gmail.com"
   },
-  "main": "mecab",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atsumari-io/node-mecab-async.git"
+  },
+  "keywords": [
+    "mecab",
+    "async",
+    "japanese"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
   "dependencies": {
     "shell-quote": "*"
   },
-  "readmeFilename": "README.md",
-  "description": "Asynchronous japanese morphological analyzer using MeCab.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hecomi/node-mecab-async.git"
-  },
-  "bugs": {
-    "mail": "info@hecomi.com",
-    "url": "http://github.com/hecomi/node-mecab-async/issues"
+  "devDependencies": {
+    "@types/node": "^18.0.6",
+    "@types/shell-quote": "^1.7.1",
+    "typescript": "^4.7.4"
   }
 }
