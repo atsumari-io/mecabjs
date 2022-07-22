@@ -1,5 +1,5 @@
-import { exec, execSync } from "child_process";
-import sq from "shell-quote";
+import { exec, execSync } from 'child_process';
+import sq from 'shell-quote';
 
 export interface MeCabWordOutput {
   kanji: string | null;
@@ -19,7 +19,7 @@ export interface MeCabOptions {
 }
 
 export class MeCab {
-  command = "mecab";
+  command = 'mecab';
   options: MeCabOptions = { maxBuffer: 300 * 1024 * 8 }; // 300kb
 
   constructor(options?: MeCabOptions) {
@@ -27,7 +27,7 @@ export class MeCab {
   }
 
   _parseField = (field: string | undefined) =>
-    field === undefined || field === "*" ? null : field;
+    field === undefined || field === '*' ? null : field;
 
   parser = (wordOutput: (string | undefined)[]): MeCabWordOutput | null =>
     wordOutput.length <= 8
@@ -44,23 +44,23 @@ export class MeCab {
           inflection: this._parseField(wordOutput[6]),
           original: this._parseField(wordOutput[7]),
           reading: this._parseField(wordOutput[8]),
-          pronunciation: this._parseField(wordOutput[9]),
+          pronunciation: this._parseField(wordOutput[9])
         };
 
   _shellCommand = (str: string) => {
-    return sq.quote(["echo", str]) + " | " + this.command;
+    return sq.quote(['echo', str]) + ' | ' + this.command;
   };
 
   _parseMeCabResult = (result: string) => {
     return result
-      .split("\n")
+      .split('\n')
       .map((line) => {
-        const arr = line.split("\t");
+        const arr = line.split('\t');
         // EOS
         if (arr.length === 1) {
           return [line];
         }
-        return [arr[0]].concat(arr[1]!.split(","));
+        return [arr[0]].concat(arr[1]?.split(','));
       })
       .map((arr) => this.parser(arr));
   };

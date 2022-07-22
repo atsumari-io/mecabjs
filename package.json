@@ -24,7 +24,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "lint": "eslint --ext .ts src"
   },
   "dependencies": {
     "shell-quote": "*"
@@ -32,6 +34,10 @@
   "devDependencies": {
     "@types/node": "^18.0.6",
     "@types/shell-quote": "^1.7.1",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "eslint": "^8.20.0",
+    "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   }
 }
