@@ -1,5 +1,5 @@
 {
-  "name": "mecabjs",
+  "name": "@atsumari/mecabjs",
   "version": "0.1.0",
   "description": "MeCab client for Node",
   "author": {
@@ -25,6 +25,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
+    "publish-lib": "npm run build && npm publish --access=public",
+    "publish-beta": "npm run build && npm publish --tag beta",
+    "publish-dryrun": "npm run build && npm publish --dry-run",
     "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "lint": "eslint --ext .ts src"
   },

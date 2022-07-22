@@ -6,9 +6,9 @@ use MeCab in your Node.js code if you have MeCab installed.
 ## Installation
 
 ```bash
-npm install mecabjs
+npm install @atsumari/mecabjs
 # or
-yarn add mecabjs
+yarn add @atsumari/mecabjs
 ```
 
 ## Usage
