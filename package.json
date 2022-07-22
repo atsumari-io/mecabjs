@@ -1,7 +1,7 @@
 {
-  "name": "mecab-async",
-  "version": "0.1.2",
-  "description": "Asynchronous japanese morphological analyzer using MeCab.",
+  "name": "mecabjs",
+  "version": "0.1.0",
+  "description": "MeCab client for Node",
   "author": {
     "name": "Nicholas Ramkissoon",
     "email": "nicholas.ramkissoon01@gmail.com"
@@ -9,8 +9,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atsumari-io/node-mecab-async.git"
+    "url": "git+https://github.com/atsumari-io/mecabjs.git"
   },
+  "bugs": {
+    "url": "https://github.com/atsumari-io/mecabjs/issues"
+  },
+  "homepage": "https://github.com/atsumari-io/mecabjs#readme",
   "keywords": [
     "mecab",
     "async",
